@@ -9,7 +9,7 @@ interface BoardingPassProps {
 export default function BoardingPass({ title, value, className }: BoardingPassProps) {
     return (
         <div className={cn(
-            "relative w-80 h-48 bg-[var(--card-bg)] border border-[var(--card-border)] rounded-xl overflow-hidden backdrop-blur-md hover:border-[var(--accent)] transition-colors group shadow-sm",
+            "relative w-full max-w-[320px] h-48 bg-[var(--card-bg)] border border-[var(--card-border)] rounded-xl overflow-hidden backdrop-blur-md hover:border-[var(--accent)] transition-colors group shadow-sm",
             className
         )}>
             {/* Glow Effect */}

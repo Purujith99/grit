@@ -36,7 +36,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-tight text-[var(--foreground)]">
+              <h1 className="text-4xl md:text-8xl font-bold tracking-tight leading-tight text-[var(--foreground)]">
                 Your Skills. <br />
                 Your Growth. <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent)] to-[var(--accent-secondary)] drop-shadow-sm">
@@ -91,7 +91,7 @@ export default function Home() {
 
         {/* Section 2: What is This? */}
         <Section>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10 w-full max-w-6xl mx-auto px-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10 w-full max-w-6xl mx-auto">
             <div className="space-y-6">
               <h2 className="text-4xl md:text-5xl font-bold text-[var(--foreground)]">What is the <br />G.R.I.T?</h2>
               <p className="text-lg text-[var(--foreground)]/70 leading-relaxed">
@@ -101,10 +101,10 @@ export default function Home() {
                 Through a structured growth journey, students demonstrate their capabilities across core professional areas and position themselves for exciting international experiences.
               </p>
             </div>
-            <div className="relative h-96 w-full bg-[var(--card-bg)]/50 rounded-2xl border border-[var(--card-border)] backdrop-blur-sm flex items-center justify-center overflow-hidden shadow-sm">
+            <div className="relative h-64 md:h-96 w-full bg-[var(--card-bg)]/50 rounded-2xl border border-[var(--card-border)] backdrop-blur-sm flex items-center justify-center overflow-hidden shadow-sm">
               <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5" />
-              <Globe className="w-48 h-48 text-[var(--accent)] opacity-20 animate-pulse relative z-10" />
-              <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-64 h-64 bg-[var(--accent)]/10 rounded-full blur-[100px]" />
+              <Globe className="w-32 h-32 md:w-48 md:h-48 text-[var(--accent)] opacity-20 animate-pulse relative z-10" />
+              <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-48 h-48 md:w-64 md:h-64 bg-[var(--accent)]/10 rounded-full blur-[100px]" />
             </div>
           </div>
         </Section>
@@ -112,8 +112,8 @@ export default function Home() {
         {/* Section 3: Why Students Love It */}
         <Section>
           <div className="w-full h-full flex flex-col justify-center z-10">
-            <h2 className="text-4xl font-bold mb-12 pl-20 md:pl-40 text-[var(--foreground)]">Why Students Love It</h2>
-            <div className="flex flex-wrap justify-center gap-6 px-10">
+            <h2 className="text-4xl font-bold mb-12 md:pl-20 text-[var(--foreground)]">Why Students Love It</h2>
+            <div className="flex flex-wrap justify-center gap-6">
               {[
                 { title: "Recognition", desc: "Recognizes consistent performers" },
                 { title: "Global Exposure", desc: "Opens doors to global exposure" },
@@ -124,7 +124,7 @@ export default function Home() {
                 <motion.div
                   key={i}
                   whileHover={{ y: -5, boxShadow: "0 10px 30px -10px rgba(0, 122, 255, 0.2)" }}
-                  className="w-72 h-44 bg-[var(--card-bg)] border border-[var(--card-border)] rounded-xl p-8 flex flex-col justify-center shadow-md hover:border-[var(--accent)]/50 transition-all flex-shrink-0"
+                  className="w-full sm:w-72 h-44 bg-[var(--card-bg)] border border-[var(--card-border)] rounded-xl p-8 flex flex-col justify-center shadow-md hover:border-[var(--accent)]/50 transition-all sm:flex-shrink-0"
                 >
                   <h3 className="text-xl font-bold mb-2 text-[var(--foreground)]">{card.title}</h3>
                   <p className="text-[var(--foreground)]/60 text-sm leading-relaxed">{card.desc}</p>
@@ -136,11 +136,11 @@ export default function Home() {
 
         {/* Section 4: Journey */}
         <Section>
-          <div className="w-full h-full flex flex-col justify-center items-center z-10 relative">
+          <div className="w-full h-full flex flex-col justify-center items-center z-10 relative py-20">
             <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5 pointer-events-none" />
-            <h2 className="text-4xl md:text-5xl font-bold mb-20 text-center text-[var(--foreground)]">Your Journey to Global Readiness</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-20 text-center text-[var(--foreground)]">Your Journey to Global Readiness</h2>
 
-            <div className="flex flex-wrap items-center gap-4 w-full justify-center px-10">
+            <div className="flex flex-col md:flex-row items-center gap-16 md:gap-4 w-full justify-center">
               {/* Visual Flow Steps */}
               {[
                 "Build Skills",
@@ -148,17 +148,17 @@ export default function Home() {
                 "Climb Leaderboard",
                 "Unlock Global Opportunities"
               ].map((step, i) => (
-                <div key={i} className="flex items-center gap-8 group">
+                <div key={i} className="flex flex-col md:flex-row items-center gap-8 group">
                   <div className="flex flex-col items-center gap-6 relative">
                     <motion.div
                       whileHover={{ scale: 1.1 }}
-                      className="w-24 h-24 rounded-full bg-[var(--card-bg)] border-2 border-[var(--accent)] flex items-center justify-center text-3xl font-bold shadow-sm hover:shadow-md transition-all z-10 text-[var(--foreground)]"
+                      className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[var(--card-bg)] border-2 border-[var(--accent)] flex items-center justify-center text-2xl md:text-3xl font-bold shadow-sm hover:shadow-md transition-all z-10 text-[var(--foreground)]"
                     >
                       {i + 1}
                     </motion.div>
-                    <span className="text-sm font-medium uppercase tracking-widest text-[var(--foreground)]/80 group-hover:text-[var(--accent)] transition-colors absolute -bottom-10 w-40 text-center">{step}</span>
+                    <span className="text-xs md:text-sm font-medium uppercase tracking-widest text-[var(--foreground)]/80 group-hover:text-[var(--accent)] transition-colors absolute -bottom-10 w-40 text-center">{step}</span>
                   </div>
-                  {i < 3 && <div className="w-32 h-1 bg-[var(--foreground)]/10 relative overflow-hidden hidden md:block">
+                  {i < 3 && <div className="hidden md:block w-20 lg:w-32 h-1 bg-[var(--foreground)]/10 relative overflow-hidden">
                     <motion.div
                       animate={{ x: ["-100%", "100%"] }}
                       transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
@@ -173,24 +173,24 @@ export default function Home() {
 
         {/* Section 5: Eligibility (Integrated) */}
         <Section>
-          <div className="w-full flex flex-wrap gap-20 items-center justify-center z-10 pl-20">
-            <div className="space-y-6 max-w-lg">
-              <h2 className="text-5xl font-bold text-[var(--foreground)]">Eligibility Criteria</h2>
-              <p className="text-xl text-[var(--foreground)]/70">
+          <div className="w-full flex flex-col lg:flex-row gap-12 lg:gap-20 items-center justify-center z-10">
+            <div className="space-y-6 max-w-lg text-center lg:text-left">
+              <h2 className="text-4xl md:text-5xl font-bold text-[var(--foreground)]">Eligibility Criteria</h2>
+              <p className="text-lg md:text-xl text-[var(--foreground)]/70">
                 Join the ranks of elite students. Eligibility is open to select batches who demonstrate commitment.
               </p>
             </div>
 
-            <div className="flex gap-6">
+            <div className="flex flex-col sm:flex-row gap-6">
               <BoardingPass
                 title="Eligible Batches"
                 value="Batch 2023, 2024 & 2025"
-                className="rotate-[-2deg] hover:rotate-0 transition-transform duration-500"
+                className="rotate-0 md:rotate-[-2deg] hover:rotate-0 transition-transform duration-500"
               />
               <BoardingPass
                 title="Attendance"
                 value="Min 75% Required"
-                className="rotate-[2deg] hover:rotate-0 transition-transform duration-500 translate-y-8"
+                className="rotate-0 md:rotate-[2deg] hover:rotate-0 transition-transform duration-500 md:translate-y-8"
               />
             </div>
           </div>
@@ -198,9 +198,9 @@ export default function Home() {
 
         {/* Section 6: Who Moves Ahead & Section 7: Track (Combined Flow) */}
         <Section>
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-20 items-center z-10 px-20">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-20 items-center z-10">
             <div className="space-y-8">
-              <h2 className="text-5xl font-bold text-[var(--foreground)]">Who Moves Ahead?</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[var(--foreground)]">Who Moves Ahead?</h2>
               <div className="space-y-4">
                 {[
                   "Consistent performance in assessments",
@@ -213,7 +213,7 @@ export default function Home() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
-                    className="flex items-center gap-3 text-lg text-[var(--foreground)]/80 p-4 bg-[var(--card-bg)] rounded-lg border border-[var(--card-border)] hover:border-[var(--accent)]/30 hover:bg-[var(--accent)]/5 transition-all shadow-sm"
+                    className="flex items-center gap-3 text-base md:text-lg text-[var(--foreground)]/80 p-4 bg-[var(--card-bg)] rounded-lg border border-[var(--card-border)] hover:border-[var(--accent)]/30 hover:bg-[var(--accent)]/5 transition-all shadow-sm"
                   >
                     <CheckCircle className="w-5 h-5 text-[var(--accent)] flex-shrink-0" />
                     {item}
@@ -222,16 +222,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="absolute -top-10 -left-10 text-[var(--accent)]/10 font-bold text-9xl z-0 pointer-events-none">TOP</div>
-              <div className="relative z-10 scale-125 origin-top-left">
+            <div className="relative flex justify-center">
+              <div className="absolute -top-10 -left-10 text-[var(--accent)]/10 font-bold text-7xl md:text-9xl z-0 pointer-events-none">TOP</div>
+              <div className="relative z-10 w-full flex justify-center scale-90 sm:scale-100 md:scale-125 md:origin-top-left">
                 <Leaderboard />
-              </div>
-              <div className="absolute top-1/2 -right-20 space-y-4">
-                <h3 className="text-3xl font-bold text-right text-[var(--foreground)]"></h3>
-                <p className="text-[var(--foreground)]/60 text-right max-w-xs ml-auto">
-
-                </p>
               </div>
             </div>
           </div>
@@ -241,25 +235,25 @@ export default function Home() {
         <Section className="border-b-0">
           <div className="flex flex-col items-center justify-center w-full h-full text-center z-10 space-y-12">
             <div className="space-y-6">
-              <h2 className="text-6xl font-bold text-[var(--foreground)]">This Isn’t Just Another Program.</h2>
-              <p className="text-2xl text-[var(--foreground)]/70 max-w-3xl mx-auto leading-relaxed">
+              <h2 className="text-4xl md:text-6xl font-bold text-[var(--foreground)]">This Isn’t Just Another Program.</h2>
+              <p className="text-lg md:text-2xl text-[var(--foreground)]/70 max-w-3xl mx-auto leading-relaxed px-4">
                 It’s a long-term investment in your career readiness, global exposure, and professional confidence.
               </p>
-              <p className="text-3xl font-medium text-[var(--accent)]">
+              <p className="text-xl md:text-3xl font-medium text-[var(--accent)]">
                 The students who stay consistent... <br />
                 are the ones who go global.
               </p>
             </div>
 
             {/* Finish Line */}
-            <div className="relative w-full max-w-4xl h-px bg-[var(--accent)] shadow-[0_0_20px_rgba(0,122,255,0.4)] mt-10">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 bg-[var(--background)] border border-[var(--accent)] text-[var(--accent)] rounded-full text-sm uppercase tracking-widest font-bold shadow-sm">
+            <div className="relative w-full max-w-4xl h-px bg-[var(--accent)] shadow-[0_0_20px_rgba(0,122,255,0.4)] mt-10 mx-6">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 bg-[var(--background)] border border-[var(--accent)] text-[var(--accent)] rounded-full text-xs md:text-sm uppercase tracking-widest font-bold shadow-sm whitespace-nowrap">
                 Global Stage
               </div>
             </div>
 
             <div className="flex gap-6 pt-10">
-              <button className="px-10 py-5 bg-[var(--foreground)] text-[var(--background)] font-bold rounded-full hover:shadow-xl hover:scale-105 transition-all text-lg">
+              <button className="px-8 md:px-10 py-4 md:py-5 bg-[var(--foreground)] text-[var(--background)] font-bold rounded-full hover:shadow-xl hover:scale-105 transition-all text-base md:text-lg">
                 Start Your Journey
               </button>
             </div>

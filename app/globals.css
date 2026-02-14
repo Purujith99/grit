@@ -2,7 +2,7 @@
 
 :root {
   /* Light Theme */
-  --background: #F0F4F8;
+  --background: hwb(0 93% 7%);
   /* Light Grey/Blueish White */
   --foreground: #0B1C3D;
   /* Deep Navy Blue */

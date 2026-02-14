@@ -64,7 +64,7 @@ export default function FlightPath() {
                         stroke="var(--accent)"
                         strokeWidth="6"
                         strokeDasharray="40 15"
-                        style={{ filter: "drop-shadow(0 0 8px rgba(0, 122, 255, 0.4))", opacity: 0.1 }}
+                        style={{ filter: "drop-shadow(0 0 8px rgba(187, 64, 64, 0.4))", opacity: 0.1 }}
                     />
                 </svg>
             </div>

@@ -11,7 +11,7 @@ export default function Section({ children, className, id }: SectionProps) {
         <section
             id={id}
             className={cn(
-                "relative w-full min-h-screen flex flex-col justify-center items-start px-20 border-b border-[var(--card-border)]",
+                "relative w-full min-h-screen flex flex-col justify-center items-start px-6 sm:px-10 md:px-20 border-b border-[var(--card-border)]",
                 className
             )}
         >
